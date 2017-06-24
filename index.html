@@ -10,7 +10,6 @@
       }
       .frame {        
         background: black;
-        padding: 0.6em 3em;
         box-sizing: border-box;
         
         position: relative;
@@ -73,10 +72,14 @@
         var child = frame.querySelectorAll(childSelector)[0];
         
         //TODO: get frame inner content ratio
-        //TODO: get child outer ratio
         //TODO: compare
         //TODO: write child-landscape or child-portrait as fixed class
         
+        /* get float offsets incl. padding, but w/o margin */ 
+        offset = {
+          'frame' : frame.getBoundingClientRect(),
+          'child' : child.getBoundingClientRect()
+        }
       });
 
     </script>
