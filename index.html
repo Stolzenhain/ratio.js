@@ -34,6 +34,21 @@
         width: auto;
       }
       
+      .child-landscape,
+      .child-portrait {
+        /* centering */
+        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        
+        /* note:
+         * apart from being semi-elegant (note selection box)
+         * this won't work on Opera Mini
+         */
+        transform: translate(-50%,-50%);
+      }
+      
       .content {
         /* background: yellow; */
         /* height: 0;
