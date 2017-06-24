@@ -24,6 +24,16 @@
         margin-left: 2.5%;
       }
       
+      .child-landscape {
+        width: 100%;
+        height: auto;
+      }
+      
+      .child-portrait {
+        height: 100%;
+        width: auto;
+      }
+      
       .content {
         /* background: yellow; */
         /* height: 0;
@@ -72,14 +82,27 @@
         var child = frame.querySelectorAll(childSelector)[0];
         
         //TODO: get frame inner content ratio
-        //TODO: compare
-        //TODO: write child-landscape or child-portrait as fixed class
         
         /* get float offsets incl. padding, but w/o margin */ 
         offset = {
           'frame' : frame.getBoundingClientRect(),
           'child' : child.getBoundingClientRect()
         }
+        
+        if (
+          //frame ratio
+          offset.frame.width/offset.frame.height
+          <=
+          //child ratio
+          offset.child.width/offset.child.height
+        ) {
+          //frame is thinner or same ratio – child behaves as landscape
+          child.classList.add('child-landscape');
+        } else {
+          //frame is wider – child behaves as portrait
+          child.classList.add('child-portrait');
+        }
+        
       });
 
     </script>
