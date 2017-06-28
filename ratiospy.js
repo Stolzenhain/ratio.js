@@ -6,8 +6,6 @@ var childRatio = function() {
 var _self = this;
 
 this.update = function (){
-  
-console.log('updating');
 
 Array.prototype.forEach.call(frames, function( frame ){
   
