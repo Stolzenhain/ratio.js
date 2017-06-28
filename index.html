@@ -130,11 +130,13 @@
       var frames = document.querySelectorAll('.frame');
       
       //init
-      //TODO: pass `frames` element
+      //TODO: pass `frames` element like ratiospy(frames)
       var ratioWatcher = childRatio();
       
       //continuous updates
+      //TODO: behaves funky in Safari in resize: further testing
       //TODO: throttle
+      //TODO: make standard param
       window.onresize = function(){
         ratioWatcher.update();
       }
