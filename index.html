@@ -81,11 +81,16 @@
     </div>
     
     <script>
-      var frames = document.querySelectorAll('.frame');
-      
+      //TODO: add as param
       var childSelector = '*:first-child';
       
-      var setRatio = function() {
+      var childRatio = function() {
+        
+      var _self = this;
+      
+      this.update = function (){
+        
+      console.log('updating');
 
       Array.prototype.forEach.call(frames, function( frame ){
         
@@ -123,12 +128,24 @@
       
       }
       
-      //initial resize
-      setRatio();
+      //init
+      _self.update();
+      
+      return this;
+      
+      }
+      
+      var frames = document.querySelectorAll('.frame');
+      
+      //init
+      //TODO: pass `frames` element
+      var ratioWatcher = childRatio();
       
       //continuous updates
       //TODO: throttle
-      window.onresize = setRatio;
+      window.onresize = function(){
+        ratioWatcher.update();
+      }
     </script>
   </body>
 </html>
