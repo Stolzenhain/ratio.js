@@ -92,6 +92,8 @@
       
       var childSelector = '*:first-child';
       
+      var setRatio = function() {
+
       Array.prototype.forEach.call(frames, function( frame ){
         
         var child = frame.querySelectorAll(childSelector)[0];
@@ -119,7 +121,15 @@
         }
         
       });
-
+      
+      }
+      
+      //initial resize
+      setRatio();
+      
+      //continuous updates
+      //TODO: throttle
+      window.onresize = setRatio;
     </script>
   </body>
 </html>
