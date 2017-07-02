@@ -1,7 +1,7 @@
 //TODO: add as param
 var childSelector = '*:first-child';
 
-var childRatio = function() {
+var ratiospy = function() {
   
   var _self = this;
   
