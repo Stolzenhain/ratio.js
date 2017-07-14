@@ -2,6 +2,8 @@
 
 Compare ratios of DOM elements – easily shim the [`object-fit`](https://developer.mozilla.org/de/docs/Web/CSS/object-fit) property on older browsers.
 
+[Check out demo](https://stolzenhain.github.io/ratio.js/)
+
 ## How does it work?
 
 Run the script to compare a DOM element – the frame - and a descendant – the child. 
