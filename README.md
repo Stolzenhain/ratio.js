@@ -2,7 +2,7 @@
 
 Compare ratios of DOM elements – easily shim the [`object-fit`](https://developer.mozilla.org/de/docs/Web/CSS/object-fit) property on older browsers.
 
-[Check out demo](https://stolzenhain.github.io/ratio.js/)
+[Check out demo](https://stolzenhain.github.io/ratiospy.js/)
 
 ## How does it work?
 
